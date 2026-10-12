@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f ${CONTAINER} || true
-                    docker run -d --name ${CONTAINER} -p 5000:5000 ${IMAGE}:latest
+                    docker run -d --name ${CONTAINER} -p 5050:5050 ${IMAGE}:latest
                 '''
             }
         }
